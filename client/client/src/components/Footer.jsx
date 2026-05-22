@@ -1,0 +1,85 @@
+import { Link } from 'react-router-dom';
+import { Facebook, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
+
+const quickLinks = [
+  { label: 'Home', path: '/' },
+  { label: 'About', path: '/about' },
+  { label: 'Services', path: '/services' },
+  { label: 'Projects', path: '/projects' },
+  { label: 'Contact', path: '/contact' }
+];
+
+const services = ['Web Development', 'Mobile App Development', 'UI/UX Design', 'Digital Marketing'];
+
+function Footer() {
+  return (
+    <footer className="bg-brand-navy text-white">
+      <div className="container-shell grid gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
+        <div>
+          <h2 className="text-2xl font-black">MJ Solution</h2>
+          <p className="mt-4 max-w-sm text-sm leading-6 text-slate-300">
+            Smart Digital Solutions for Your Business through modern web, mobile, software, and digital growth
+            services.
+          </p>
+          <div className="mt-5 flex gap-3">
+            {[Facebook, Twitter, Linkedin].map((Icon, index) => (
+              <a
+                key={index}
+                href="#"
+                className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-cyan-200 transition hover:bg-brand-cyan hover:text-brand-navy"
+                aria-label="Social media"
+              >
+                <Icon size={18} />
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h3 className="text-sm font-bold uppercase tracking-wider text-cyan-200">Quick Links</h3>
+          <ul className="mt-4 space-y-3 text-sm text-slate-300">
+            {quickLinks.map((link) => (
+              <li key={link.path}>
+                <Link to={link.path} className="transition hover:text-white">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-sm font-bold uppercase tracking-wider text-cyan-200">Services</h3>
+          <ul className="mt-4 space-y-3 text-sm text-slate-300">
+            {services.map((service) => (
+              <li key={service}>{service}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-sm font-bold uppercase tracking-wider text-cyan-200">Contact</h3>
+          <ul className="mt-4 space-y-4 text-sm text-slate-300">
+            <li className="flex gap-3">
+              <MapPin className="mt-0.5 shrink-0 text-brand-cyan" size={18} />
+              Colombo, Sri Lanka
+            </li>
+            <li className="flex gap-3">
+              <Phone className="mt-0.5 shrink-0 text-brand-cyan" size={18} />
+              +94 77 123 4567
+            </li>
+            <li className="flex gap-3">
+              <Mail className="mt-0.5 shrink-0 text-brand-cyan" size={18} />
+              hello@mjsolution.com
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="border-t border-white/10 py-5 text-center text-sm text-slate-400">
+        &copy; {new Date().getFullYear()} MJ Solution. All rights reserved.
+      </div>
+    </footer>
+  );
+}
+
+export default Footer;
