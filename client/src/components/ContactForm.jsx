@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send } from 'lucide-react';
+import { submitContactMessage } from '../api/contact.js';
 
 const initialForm = {
   name: '',
@@ -47,23 +48,14 @@ function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
-      const response = await fetch(`${apiUrl}/contact`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form)
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || 'Something went wrong. Please try again.');
-      }
-
+      await submitContactMessage(form);
       setStatus({ type: 'success', message: 'Thanks! Your message has been sent.' });
       setForm(initialForm);
     } catch (error) {
-      setStatus({ type: 'error', message: error.message });
+      setStatus({
+        type: 'error',
+        message: error.response?.data?.message || error.message || 'Something went wrong. Please try again.'
+      });
     } finally {
       setIsSubmitting(false);
     }

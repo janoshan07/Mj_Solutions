@@ -2,6 +2,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import express from 'express';
 import connectDB from './config/db.js';
+import { errorHandler, notFound } from './middleware/errorHandler.js';
 import contactRoutes from './routes/contactRoutes.js';
 
 dotenv.config();
@@ -25,21 +26,8 @@ app.get('/', (req, res) => {
 
 app.use('/api/contact', contactRoutes);
 
-app.use((req, res) => {
-  res.status(404).json({
-    success: false,
-    message: 'Route not found.'
-  });
-});
-
-app.use((error, req, res, next) => {
-  const statusCode = error.name === 'ValidationError' ? 400 : 500;
-
-  res.status(statusCode).json({
-    success: false,
-    message: error.message || 'Server error.'
-  });
-});
+app.use(notFound);
+app.use(errorHandler);
 
 app.listen(PORT, () => {
   console.log(`MJ Solution server running on port ${PORT}`);

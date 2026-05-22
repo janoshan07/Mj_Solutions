@@ -1,4 +1,5 @@
 import ProjectCard from '../components/ProjectCard.jsx';
+import SectionHeading from '../components/SectionHeading.jsx';
 
 const projects = [
   {
@@ -39,19 +40,15 @@ const projects = [
   }
 ];
 
-function Projects() {
+function Portfolio() {
   return (
     <section className="section-padding bg-white">
       <div className="container-shell">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-black uppercase text-brand-blue">Projects</p>
-          <h1 className="mt-3 text-4xl font-black tracking-tight text-brand-navy sm:text-5xl">
-            Sample work and portfolio concepts.
-          </h1>
-          <p className="mt-5 leading-8 text-slate-600">
-            Explore examples of the digital products, campaigns, and systems MJ Solution can create for clients.
-          </p>
-        </div>
+        <SectionHeading
+          eyebrow="Portfolio"
+          title="Sample work and portfolio concepts."
+          description="Explore examples of the digital products, campaigns, and systems MJ Solution can create for clients."
+        />
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
@@ -63,4 +60,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Portfolio;
