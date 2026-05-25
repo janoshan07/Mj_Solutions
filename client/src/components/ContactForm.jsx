@@ -64,7 +64,7 @@ function ContactForm() {
   return (
     <motion.form
       onSubmit={handleSubmit}
-      className="rounded-lg border border-cyan-400/20 bg-slate-950/75 p-6 shadow-glow backdrop-blur sm:p-8"
+      className="rounded-lg border border-cyan-400/20 bg-slate-950/75 p-6 shadow-[0_0_36px_rgba(34,211,238,0.12)] backdrop-blur sm:p-8"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -87,7 +87,7 @@ function ContactForm() {
           rows="6"
           value={form.message}
           onChange={handleChange}
-          className={`mt-2 w-full rounded-lg border bg-slate-900/80 px-4 py-3 text-slate-100 outline-none transition placeholder:text-slate-500 focus:border-brand-primary focus:ring-4 focus:ring-cyan-400/10 ${
+          className={`mt-2 w-full rounded-lg border bg-slate-900/80 px-4 py-3 text-slate-100 outline-none transition placeholder:text-slate-500 focus:border-brand-primary focus:shadow-[0_0_22px_rgba(34,211,238,0.14)] focus:ring-4 focus:ring-cyan-400/10 ${
             errors.message ? 'border-red-400' : 'border-white/10'
           }`}
         />
@@ -95,7 +95,7 @@ function ContactForm() {
       </div>
 
       {status.message && (
-        <p className={`mt-5 rounded-lg px-4 py-3 text-sm ${status.type === 'success' ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'}`}>
+        <p className={`mt-5 rounded-lg border px-4 py-3 text-sm ${status.type === 'success' ? 'border-emerald-400/30 bg-emerald-400/10 text-emerald-200' : 'border-red-400/30 bg-red-400/10 text-red-200'}`}>
           {status.message}
         </p>
       )}
@@ -103,7 +103,7 @@ function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-brand-primary px-6 py-3 font-bold text-slate-950 shadow-glow transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+        className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-brand-primary to-fuchsia-400 px-6 py-3 font-black text-slate-950 shadow-[0_0_30px_rgba(34,211,238,0.26)] transition hover:-translate-y-0.5 hover:from-white hover:to-brand-primary disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
       >
         <Send size={18} />
         {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -124,7 +124,7 @@ function Input({ label, name, value, onChange, error, type = 'text' }) {
         type={type}
         value={value}
         onChange={onChange}
-        className={`mt-2 w-full rounded-lg border bg-slate-900/80 px-4 py-3 text-slate-100 outline-none transition placeholder:text-slate-500 focus:border-brand-primary focus:ring-4 focus:ring-cyan-400/10 ${
+        className={`mt-2 w-full rounded-lg border bg-slate-900/80 px-4 py-3 text-slate-100 outline-none transition placeholder:text-slate-500 focus:border-brand-primary focus:shadow-[0_0_22px_rgba(34,211,238,0.14)] focus:ring-4 focus:ring-cyan-400/10 ${
           error ? 'border-red-400' : 'border-white/10'
         }`}
       />

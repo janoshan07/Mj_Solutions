@@ -6,7 +6,12 @@ function Hero() {
   return (
     <section className="relative overflow-hidden bg-[radial-gradient(circle_at_20%_10%,rgba(34,211,238,0.18),transparent_32rem),radial-gradient(circle_at_90%_20%,rgba(167,139,250,0.18),transparent_28rem),#030712]">
       <div className="container-shell grid min-h-[calc(100vh-74px)] items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_0.85fr] lg:px-8">
-        <motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65 }}>
+        <motion.div
+          className="relative z-10"
+          initial={{ opacity: 0, y: 28 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.65 }}
+        >
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-sm font-semibold text-brand-primary shadow-glow">
             <Sparkles size={16} />
             Digital solutions built for growth
@@ -24,7 +29,7 @@ function Hero() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
               to="/services"
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-primary px-6 py-3 font-bold text-slate-950 shadow-glow transition hover:bg-white"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-cyan-200 bg-white px-6 py-3 text-base font-black text-slate-950 shadow-[0_0_32px_rgba(34,211,238,0.38)] transition hover:-translate-y-0.5 hover:bg-brand-primary focus:outline-none focus:ring-4 focus:ring-cyan-300/35"
             >
               Our Services
               <ArrowRight size={18} />

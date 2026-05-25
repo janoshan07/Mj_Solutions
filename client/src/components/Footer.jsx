@@ -11,6 +11,9 @@ const quickLinks = [
 ];
 
 const services = ['Web Development', 'Mobile App Development', 'UI/UX Design', 'Digital Marketing'];
+const contactEmail = 'hello@mjsolution.com';
+const contactPhone = '+94 76 681 7734';
+const contactLocation = 'Colombo, Sri Lanka';
 
 function Footer() {
   return (
@@ -61,17 +64,28 @@ function Footer() {
         <div>
           <h3 className="text-sm font-bold uppercase tracking-wider text-brand-accent">Contact</h3>
           <ul className="mt-4 space-y-4 text-sm text-slate-300">
-            <li className="flex gap-3">
-              <MapPin className="mt-0.5 shrink-0 text-brand-accent" size={18} />
-              Colombo, Sri Lanka
+            <li>
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contactLocation)}`}
+                target="_blank"
+                rel="noreferrer"
+                className="flex gap-3 transition hover:text-white"
+              >
+                <MapPin className="mt-0.5 shrink-0 text-brand-accent" size={18} />
+                {contactLocation}
+              </a>
             </li>
-            <li className="flex gap-3">
-              <Phone className="mt-0.5 shrink-0 text-brand-accent" size={18} />
-              +94 77 123 4567
+            <li>
+              <a href="tel:+94766817734" className="flex gap-3 transition hover:text-white">
+                <Phone className="mt-0.5 shrink-0 text-brand-accent" size={18} />
+                {contactPhone}
+              </a>
             </li>
-            <li className="flex gap-3">
-              <Mail className="mt-0.5 shrink-0 text-brand-accent" size={18} />
-              hello@mjsolution.com
+            <li>
+              <a href={`mailto:${contactEmail}`} className="flex gap-3 transition hover:text-white">
+                <Mail className="mt-0.5 shrink-0 text-brand-accent" size={18} />
+                {contactEmail}
+              </a>
             </li>
           </ul>
         </div>
