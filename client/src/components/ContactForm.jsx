@@ -64,7 +64,7 @@ function ContactForm() {
   return (
     <motion.form
       onSubmit={handleSubmit}
-      className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm sm:p-8"
+      className="rounded-lg border border-cyan-400/20 bg-slate-950/75 p-6 shadow-glow backdrop-blur sm:p-8"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -78,7 +78,7 @@ function ContactForm() {
       </div>
 
       <div className="mt-5">
-        <label htmlFor="message" className="text-sm font-bold text-slate-800">
+        <label htmlFor="message" className="text-sm font-bold text-slate-200">
           Message
         </label>
         <textarea
@@ -87,8 +87,8 @@ function ContactForm() {
           rows="6"
           value={form.message}
           onChange={handleChange}
-          className={`mt-2 w-full rounded-lg border px-4 py-3 outline-none transition focus:border-brand-blue focus:ring-4 focus:ring-blue-100 ${
-            errors.message ? 'border-red-400' : 'border-slate-300'
+          className={`mt-2 w-full rounded-lg border bg-slate-900/80 px-4 py-3 text-slate-100 outline-none transition placeholder:text-slate-500 focus:border-brand-primary focus:ring-4 focus:ring-cyan-400/10 ${
+            errors.message ? 'border-red-400' : 'border-white/10'
           }`}
         />
         {errors.message && <p className="mt-2 text-sm text-red-600">{errors.message}</p>}
@@ -103,7 +103,7 @@ function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-brand-blue px-6 py-3 font-bold text-white shadow-glow transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+        className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-brand-primary px-6 py-3 font-bold text-slate-950 shadow-glow transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
       >
         <Send size={18} />
         {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -115,7 +115,7 @@ function ContactForm() {
 function Input({ label, name, value, onChange, error, type = 'text' }) {
   return (
     <div>
-      <label htmlFor={name} className="text-sm font-bold text-slate-800">
+      <label htmlFor={name} className="text-sm font-bold text-slate-200">
         {label}
       </label>
       <input
@@ -124,8 +124,8 @@ function Input({ label, name, value, onChange, error, type = 'text' }) {
         type={type}
         value={value}
         onChange={onChange}
-        className={`mt-2 w-full rounded-lg border px-4 py-3 outline-none transition focus:border-brand-blue focus:ring-4 focus:ring-blue-100 ${
-          error ? 'border-red-400' : 'border-slate-300'
+        className={`mt-2 w-full rounded-lg border bg-slate-900/80 px-4 py-3 text-slate-100 outline-none transition placeholder:text-slate-500 focus:border-brand-primary focus:ring-4 focus:ring-cyan-400/10 ${
+          error ? 'border-red-400' : 'border-white/10'
         }`}
       />
       {error && <p className="mt-2 text-sm text-red-600">{error}</p>}

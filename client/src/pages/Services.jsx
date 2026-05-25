@@ -36,14 +36,14 @@ const services = [
 
 function Services() {
   return (
-    <section className="section-padding bg-slate-50">
+    <section className="section-padding bg-brand-mist">
       <div className="container-shell">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-black uppercase text-brand-blue">Our Services</p>
-          <h1 className="mt-3 text-4xl font-black tracking-tight text-brand-navy sm:text-5xl">
+          <p className="text-sm font-black uppercase text-brand-primary">Our Services</p>
+          <h1 className="mt-3 text-4xl font-black tracking-tight text-brand-ink sm:text-5xl">
             Digital services for every stage of growth.
           </h1>
-          <p className="mt-5 leading-8 text-slate-600">
+          <p className="mt-5 leading-8 text-slate-300">
             From first launch to advanced systems, MJ Solution provides the technical and creative support businesses need.
           </p>
         </div>

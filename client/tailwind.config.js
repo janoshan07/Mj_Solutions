@@ -5,14 +5,16 @@ export default {
     extend: {
       colors: {
         brand: {
-          navy: '#0f172a',
-          blue: '#0b63f6',
-          cyan: '#05b8ff',
-          mist: '#eef9ff'
+          ink: '#f8fafc',
+          primary: '#22d3ee',
+          accent: '#a78bfa',
+          mist: '#07111f',
+          surface: '#030712',
+          panel: '#0b1220'
         }
       },
       boxShadow: {
-        glow: '0 20px 50px rgba(5, 184, 255, 0.18)'
+        glow: '0 0 28px rgba(34, 211, 238, 0.24)'
       }
     }
   },

@@ -11,7 +11,7 @@ import Contact from './pages/Contact.jsx';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white text-slate-950">
+    <div className="min-h-screen bg-brand-surface text-slate-100">
       <ScrollToTop />
       <Navbar />
       <main>

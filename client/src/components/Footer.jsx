@@ -14,10 +14,10 @@ const services = ['Web Development', 'Mobile App Development', 'UI/UX Design', '
 
 function Footer() {
   return (
-    <footer className="bg-brand-navy text-white">
+    <footer className="border-t border-cyan-400/25 bg-slate-950 text-white shadow-[0_-18px_50px_rgba(167,139,250,0.10)]">
       <div className="container-shell grid gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
         <div>
-          <h2 className="text-2xl font-black">MJ Solution</h2>
+          <h2 className="text-2xl font-black text-brand-primary">MJ Solution</h2>
           <p className="mt-4 max-w-sm text-sm leading-6 text-slate-300">
             Smart Digital Solutions for Your Business through modern web, mobile, software, and digital growth
             services.
@@ -27,7 +27,7 @@ function Footer() {
               <a
                 key={index}
                 href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-cyan-200 transition hover:bg-brand-cyan hover:text-brand-navy"
+                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-slate-200 transition hover:border-brand-primary hover:bg-brand-primary hover:text-slate-950"
                 aria-label="Social media"
               >
                 <Icon size={18} />
@@ -37,7 +37,7 @@ function Footer() {
         </div>
 
         <div>
-          <h3 className="text-sm font-bold uppercase tracking-wider text-cyan-200">Quick Links</h3>
+          <h3 className="text-sm font-bold uppercase tracking-wider text-brand-accent">Quick Links</h3>
           <ul className="mt-4 space-y-3 text-sm text-slate-300">
             {quickLinks.map((link) => (
               <li key={link.path}>
@@ -50,7 +50,7 @@ function Footer() {
         </div>
 
         <div>
-          <h3 className="text-sm font-bold uppercase tracking-wider text-cyan-200">Services</h3>
+          <h3 className="text-sm font-bold uppercase tracking-wider text-brand-accent">Services</h3>
           <ul className="mt-4 space-y-3 text-sm text-slate-300">
             {services.map((service) => (
               <li key={service}>{service}</li>
@@ -59,24 +59,24 @@ function Footer() {
         </div>
 
         <div>
-          <h3 className="text-sm font-bold uppercase tracking-wider text-cyan-200">Contact</h3>
+          <h3 className="text-sm font-bold uppercase tracking-wider text-brand-accent">Contact</h3>
           <ul className="mt-4 space-y-4 text-sm text-slate-300">
             <li className="flex gap-3">
-              <MapPin className="mt-0.5 shrink-0 text-brand-cyan" size={18} />
+              <MapPin className="mt-0.5 shrink-0 text-brand-accent" size={18} />
               Colombo, Sri Lanka
             </li>
             <li className="flex gap-3">
-              <Phone className="mt-0.5 shrink-0 text-brand-cyan" size={18} />
+              <Phone className="mt-0.5 shrink-0 text-brand-accent" size={18} />
               +94 77 123 4567
             </li>
             <li className="flex gap-3">
-              <Mail className="mt-0.5 shrink-0 text-brand-cyan" size={18} />
+              <Mail className="mt-0.5 shrink-0 text-brand-accent" size={18} />
               hello@mjsolution.com
             </li>
           </ul>
         </div>
       </div>
-      <div className="border-t border-white/10 py-5 text-center text-sm text-slate-400">
+      <div className="border-t border-cyan-400/15 py-5 text-center text-sm text-slate-500">
         &copy; {new Date().getFullYear()} MJ Solution. All rights reserved.
       </div>
     </footer>

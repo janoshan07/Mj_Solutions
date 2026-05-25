@@ -25,7 +25,7 @@ function Home() {
   return (
     <>
       <Hero />
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-brand-surface">
         <div className="container-shell">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
             <motion.div
@@ -34,17 +34,17 @@ function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <p className="text-sm font-black uppercase text-brand-blue">About MJ Solution</p>
-              <h2 className="mt-3 text-3xl font-black text-brand-navy sm:text-4xl">
+              <p className="text-sm font-black uppercase text-brand-primary">About MJ Solution</p>
+              <h2 className="mt-3 text-3xl font-black text-brand-ink sm:text-4xl">
                 A digital solutions partner for modern businesses.
               </h2>
-              <p className="mt-5 leading-8 text-slate-600">
+              <p className="mt-5 leading-8 text-slate-300">
                 MJ Solution builds practical digital products that help companies improve operations, reach customers,
                 and scale with confidence. From idea to launch, we combine strategy, design, engineering, and support.
               </p>
               <Link
                 to="/about"
-                className="mt-7 inline-flex items-center gap-2 font-bold text-brand-blue transition hover:text-blue-800"
+                className="mt-7 inline-flex items-center gap-2 font-bold text-brand-primary transition hover:text-brand-ink"
               >
                 Learn more
                 <ArrowRight size={18} />
@@ -53,10 +53,10 @@ function Home() {
 
             <div className="grid gap-5 sm:grid-cols-3">
               {highlights.map(({ icon: Icon, title, text }) => (
-                <article key={title} className="rounded-lg border border-slate-200 bg-slate-50 p-5">
-                  <Icon className="text-brand-blue" size={28} />
-                  <h3 className="mt-4 font-black text-brand-navy">{title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-slate-600">{text}</p>
+                <article key={title} className="rounded-lg border border-cyan-400/15 bg-slate-950/70 p-5">
+                  <Icon className="text-brand-primary" size={28} />
+                  <h3 className="mt-4 font-black text-brand-ink">{title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-300">{text}</p>
                 </article>
               ))}
             </div>

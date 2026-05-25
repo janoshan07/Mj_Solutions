@@ -27,7 +27,7 @@ const testimonials = [
 
 function Testimonials() {
   return (
-    <section className="section-padding bg-slate-50">
+    <section className="section-padding bg-brand-mist">
       <div className="container-shell">
         <SectionHeading
           eyebrow="Testimonials"

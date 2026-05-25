@@ -42,7 +42,7 @@ const projects = [
 
 function Portfolio() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-brand-surface">
       <div className="container-shell">
         <SectionHeading
           eyebrow="Portfolio"
