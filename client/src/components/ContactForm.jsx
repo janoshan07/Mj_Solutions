@@ -103,7 +103,7 @@ function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-brand-primary to-fuchsia-400 px-6 py-3 font-black text-slate-950 shadow-[0_0_30px_rgba(34,211,238,0.26)] transition hover:-translate-y-0.5 hover:from-white hover:to-brand-primary disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+        className="relative z-10 mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg border border-cyan-200 bg-white px-7 py-3 text-base font-black text-slate-950 shadow-[0_0_36px_rgba(34,211,238,0.45)] transition hover:-translate-y-0.5 hover:bg-brand-primary hover:shadow-[0_0_42px_rgba(217,70,239,0.30)] focus:outline-none focus:ring-4 focus:ring-cyan-300/40 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
       >
         <Send size={18} />
         {isSubmitting ? 'Sending...' : 'Send Message'}

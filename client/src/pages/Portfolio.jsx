@@ -3,10 +3,11 @@ import SectionHeading from '../components/SectionHeading.jsx';
 
 const projects = [
   {
-    title: 'Nexa Commerce Platform',
-    category: 'Web Development',
-    description: 'A modern ecommerce storefront with product filtering, order flows, and analytics-ready structure.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80'
+    title: 'Grow More Company Website',
+    category: 'Company Website',
+    description: 'A real business website built for Grow More with a clean company profile, service presentation, and responsive layout.',
+    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1000&q=80',
+    link: 'https://growmore-two.vercel.app/'
   },
   {
     title: 'CareLink Mobile App',
